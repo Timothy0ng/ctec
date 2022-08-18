@@ -1,0 +1,26 @@
+<div style="display: flex; justify-content: center;">
+    <div class="mui-panel profile panel">
+        <img class="mui--pull-left" style="float:left; cursor:pointer; width: 5vw; height: 5vw;" src="pics/no_one.png"
+            alt="Card image cap">
+        <div class="card-body" style="background-color: aliceblue; width: 77vw; height: 10vw;">
+            <!-- toggle this part -->
+            <div>
+                <button id="openReview" onclick="openReview()">Leave a review</button>
+            </div>
+            <div id="leaveReview" style="display: none;">
+                <!-- <label for="userReview">Leave a review</label> -->
+                <textarea id="userReview" required class="form-control form-rounded" rows="3" cols="100%"></textarea>
+                <!-- ratings put here -->
+                <label for="knife">Rating</label>
+                <!-- <div style="height: 1vh; width: auto;"> -->
+                    <img style="height: 10vh; width: auto;" src="pics/knife_inactive.png" class="knife" value="1" onmouseover="rateIt(this)" />
+                    <img style="height: 10vh; width: auto;" src="pics/knife_inactive.png" class="knife" value="2" onmouseover="rateIt(this)" />
+                    <img style="height: 10vh; width: auto;" src="pics/knife_inactive.png" class="knife" value="3" onmouseover="rateIt(this)" />
+                    <img style="height: 10vh; width: auto;" src="pics/knife_inactive.png" class="knife" value="4" onmouseover="rateIt(this)" />
+                    <img style="height: 10vh; width: auto;" src="pics/knife_inactive.png" class="knife" value="5" onmouseover="rateIt(this)" />
+                <!-- </div> -->
+                <button id="submitComment" class="btn btn-primary float-right" type="button" onclick="addReview()">Send</button>
+            </div>
+        </div>
+    </div>
+</div>

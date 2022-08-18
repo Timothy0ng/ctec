@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-sm bg-dark">
+    <a style="color: rgb(255, 255, 255);"  class="navbar-brand" href="./signIn.html">
+        <img id="loginbtn" src="pics/no_one.PNG" width="30" height="30" class="d-inline-block align-top" alt=""> <!--login-->
+    </a>
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+    </button> -->
+    <!-- to initialise the collapsible btn before putting the class -->
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+    
+            <li class="nav-item">
+                <a style="color: rgb(255, 255, 255);" class="nav-link" href="home.html" id="navbarDropdown"
+                    role="button" aria-haspopup="true" aria-expanded="false">
+                    Home
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a style="color: rgb(255, 255, 255);" class="nav-link" href="feedback.html" id="navbarDropdown"
+                    role="button" aria-haspopup="true" aria-expanded="false">
+                    Feedback
+                </a>
+            </li>
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input id="searchbar" class="form-control mr-sm-2" type="search" placeholder="Search Books">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="getSearchedBooks()">Search</button>
+        </form>
+    </div>
+</nav>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link href="css/home.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Meie+Script&display=swap" rel="stylesheet">
+</head>
+
+<body class="homebg">
+    <h5 class="daBrand">Food Bureau of Investigation</h5>
+    <div style="background-color: black;">
+        <br>
+    </div>
+
+    <div w3-include-html="top-navbar.html" class="navbar-light sticky-top"></div>
+
+    <div style="padding-top: 15vh;">
+        <form style="padding-left: 25vw;" id="loginform">
+            <div class="form-group row">
+                <div class="col-md-8">
+                    <label for="username">Username</label>
+                    <input type="username" class="form-control" id="username" placeholder="Username">
+                </div>
+
+            </div>
+            <div class="form-group row">
+                <div class="col-md-8">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+            </div>
+
+            <div class="form-group row" style="display:none">
+                <div class="col-md-8">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Email">
+                </div>
+            </div>
+
+            <div style="padding-right: 25vw;">
+                <button id="loginbtn" onclick="login()" type="button" class="btn btn-warning float-right">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <div style="padding-left: 25vw;">
+    <button id="signup" class="btn btn-primary" onclick="logout()">Sign me up</small>
+</div>
+
+    <div w3-include-html="successModal.html"></div>
+    <div w3-include-html="failModal.html"></div>
+
+
+</body>
+
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script>
+    //to bring in other HTML on the fly into this page
+    w3.includeHTML();
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/86ec7c1143.js"></script>
+<script src="js/users.js"></script>
+<!-- <script src="js/checktoken.js"></script> -->
+</html>

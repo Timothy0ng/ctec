@@ -1,0 +1,23 @@
+.daBrand{
+    font-family: 'Meie Script', cursive; 
+    font-size: 10em;
+    text-align: center;
+    color: aliceblue;
+    /*border:none;
+    padding: none;
+    */
+}
+header{
+    background-image: url("../pics/Asian.jpg");
+    padding-bottom: 45%;
+}
+.responsive{
+    max-width: auto;
+    width: 80%;
+    margin: auto;
+}
+@media (max-width: 320px){
+    .navbar-nav{
+        font-size: smaller;
+    }
+}

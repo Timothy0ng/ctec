@@ -1,0 +1,67 @@
+.daBrand{
+    font-family: 'Meie Script', cursive; 
+    font-size: 5vw;
+    text-align: center;
+    color: aliceblue;
+    background-color: black;
+    max-width: auto;
+    width:auto;
+    margin: auto;
+    /*border:none;
+    padding: none;
+    */
+}
+
+/* ------for da mobile(copy n paste if u have to)
+@media screen and (max-width:1200px){
+    .daBrand{
+        font-family: 'Meie Script', cursive; 
+        font-size: 5rem;
+        text-align: center;
+        background-color: black;
+        color: aliceblue;
+        max-width: auto;
+        width:auto;
+        margin: auto;
+        /*border:none;
+        padding: none;
+       
+    }
+}  */
+/* li.nav-item dropdown > a{
+    color: aliceblue;
+} */
+
+.homebg{
+    width: 100vw;
+    height: 100vh;
+
+  grid-row: 1;
+  grid-column: 1;
+  position: sticky;
+  top: 0;
+  background-image: url("../pics/nice.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#content {
+    width: 100%;
+    z-index: 0;
+    grid-row: 1;
+    grid-column: 1;
+    margin: 0 auto;
+}
+
+#rest {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+#stickybtn{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 6.7vh;
+    z-index: 9999;
+}

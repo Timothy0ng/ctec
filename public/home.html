@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Bureau of Investigation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
+    <link href="css/home.css" rel="stylesheet" type="text/css">
+    <!-- Brand/logo link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Meie+Script&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body onload="toggler()">
+    <header>
+        <h5 class="daBrand">Food Bureau of Investigation</h5>
+        <div style="background-color: black;">
+        <br>
+    </div>
+    </header>
+    <div id="rest">
+        <div class="homebg"></div>
+        <!-- Bar -->
+
+        <div id="content">
+            <div w3-include-html="top-navbar.html" class="navbar-light sticky-top"></div>
+            <div id="homestart">
+                <div w3-include-html="sortbtn.html" id="stickybtn"></div>
+                <div id="booksTable" class="row"></div>
+            </div>
+
+
+            <!-- this the indiv book part -->
+            <div id="theBook" style="display: none;">
+                <div w3-include-html="book.html"></div>
+            </div>
+            <!-- ending div for book onclick -->
+
+        </div>
+    </div>
+
+
+
+
+
+    <!-- login page -->
+    <!-- <div id="loginpage" style="display: none;">
+        <div w3-include-html="login.html"></div>
+    </div> -->
+</body>
+
+<!-- from cdev slides -->
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script>
+    //to bring in other HTML on the fly into this page
+    w3.includeHTML();
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/86ec7c1143.js"></script>
+<script src="js/app.js"></script>
+<script src="js/reviews.js"></script>
+<script src="js/books.js"></script>
+<!-- may need delete ltr -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+    integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+    integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+    crossorigin="anonymous"></script>
+</html>
