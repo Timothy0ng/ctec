@@ -3,7 +3,7 @@ const port = 3000;
 
 var reviewController =  require('./controllers/reviewController');
 var userController = require('./controllers/userController');
-var feedbackController = require('./controllers/feedbackController');
+// var feedbackController = require('./controllers/feedbackController');
 // var opinionController = require('./controllers/opinionController');
 var booksController = require('./controllers/booksController');
 
@@ -36,10 +36,10 @@ app.route('/pic').put(userController.updateUserPic);
 app.route('/resetpassword').put(userController.resetPassword);
 app.route('/users').delete(userController.removeAccount);
 
-app.route('/feedback').get(feedbackController.getAllfeedbacks);
-app.route('/feedback').post(feedbackController.addfeedback);
-app.route('/feedback').put(feedbackController.updatefeedback);
-app.route('/feedback').delete(feedbackController.deletefeedback);
+// app.route('/feedback').get(feedbackController.getAllfeedbacks);
+// app.route('/feedback').post(feedbackController.addfeedback);
+// app.route('/feedback').put(feedbackController.updatefeedback);
+// app.route('/feedback').delete(feedbackController.deletefeedback);
 
 //change ltr
 // app.route('/likes').get(opinionController.getAllLikes);
