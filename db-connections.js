@@ -1,10 +1,10 @@
 var mysql = require('mysql');
 var connection = mysql.createConnection({
-    host:'localhost',
+    host:'ctec.cn5jo81lvvvh.us-east-1.rds.amazonaws.com',
     //this is bcos its running on laptop. If it is other machine, put the ip address.
     port:'3306',
-    user:'root',
-    password:'cdev',
+    user:'admin',
+    password:'password',
     database:'ctec'  //CHANGE LATER
 });
 

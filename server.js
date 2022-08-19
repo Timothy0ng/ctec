@@ -1,4 +1,5 @@
 var express = require("express"); //using the express web framework
+const port = 3000;
 
 var reviewController =  require('./controllers/reviewController');
 var userController = require('./controllers/userController');
@@ -54,5 +55,5 @@ app.route('/catsort').get(booksController.catFilter);
 
 
 
-app.listen(8080, "127.0.0.1"); // start the nodejs to be listening for incoming request @ port 8080
-console.log("web server running @ http://127.0.0.1:8080"); // output to console 
+app.listen(port, "127.0.0.1"); // start the nodejs to be listening for incoming request @ port 8080
+console.log("ctec web server running @ http://127.0.0.1:3000"); // output to console 
