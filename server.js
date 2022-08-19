@@ -55,5 +55,5 @@ app.route('/catsort').get(booksController.catFilter);
 
 
 
-app.listen(port, "127.0.0.1"); // start the nodejs to be listening for incoming request @ port 8080
-console.log("ctec web server running @ public ipv4 address under details in ec2 view."); // output to console 
+app.listen(port); // start the nodejs to be listening for incoming request @ port 8080
+// console.log("ctec web server running @ public ipv4 address under details in ec2 view."); // output to console 
