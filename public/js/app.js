@@ -18,8 +18,8 @@ var searchstatus = true;
 var reviews_url = "/reviews"
 var review_array = []
 var rating = null;
-var knife_inactiveImage= 'pics/knife_inactive.png';
-var knifeImage = 'pics/knife_active.png';
+var knife_inactiveImage= 'https://ctecimages69.s3.amazonaws.com/pics/knife_inactive.png';
+var knifeImage = 'https://ctecimages69.s3.amazonaws.com/pics/knife_active.png';
 
 
 

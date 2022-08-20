@@ -136,7 +136,7 @@ function showBookReviews(element) {
             var star = "";
             for (var j = 0; j < review_array[i].rating; j++) {
                 console.log(i);
-                star += "<img src='pics/knife_active.png' style='width:7vw' />";
+                star += "<img src='https://ctecimages69.s3.amazonaws.com/pics/knife_active.png' style='width:7vw' />";
             }
             star += "<i class='far fa-trash-alt fa-2x edit' data-dismiss='modal' item='" + i + "' onClick='deleteReview(this)' ></i>";
             star += "<i class='far fa-edit fa-2x edit' data-toggle='modal' data-target='#editReviewsModal' data-dismiss='modal' item='" + i + "' onClick='editReview(this)' ></i>";
