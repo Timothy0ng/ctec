@@ -8,10 +8,10 @@ function fetchReviews() {
     // var review = new Object();
     // review.reviews_bookId = book_array[currentIndex].id;
 
-    //This command starts the calling of the comments api
+    //This command starts the calling of the reviews api
     request.setRequestHeader("Content-Type", "application/json");
     request.onload = function () {
-        //get all the comments records into our comments array
+        //get all the reviews records into our reviews array
         review_array = JSON.parse(request.responseText);
         // getPics();
         console.log(review_array);
@@ -110,15 +110,15 @@ function changeKnifeImage(num, classTarget) {
 }
 
 function showBookReviews(element) {
-    // document.getElementById("emptyComment").innerHTML = "No review yet. Create one now";
+    // document.getElementById("emptyreview").innerHTML = "No review yet. Create one now";
     var item = element.getAttribute("item");
     currentIndex = item;
     // document.getElementById("review").textContent = "Review for " + review_array[item].title;
-    // document.getElementById("commentBody").textContent = "";
+    // document.getElementById("reviewBody").textContent = "";
 
     for (var i = 0; i < review_array.length; i++) {
         if (review_array[i].reviews_BookId === book_array[item].id) {
-            // document.getElementById("emptyComment").innerHTML = "";
+            // document.getElementById("emptyreview").innerHTML = "";
             selectedMovieId = review_array[item]._id;
             star = "";
             var html = '<div class="text-center" style="width:80%; padding-left:20vw;">                                                           \
@@ -138,9 +138,49 @@ function showBookReviews(element) {
                 console.log(i);
                 star += "<img src='pics/knife_active.png' style='width:7vw' />";
             }
-            star += "<i class='far fa-trash-alt fa-2x edit' data-dismiss='modal' item='" + i + "' onClick='deleteComment(this)' ></i>";
-            star += "<i class='far fa-edit fa-2x edit' data-toggle='modal' data-target='#editCommentModal' data-dismiss='modal' item='" + i + "' onClick='editComment(this)' ></i>";
+            star += "<i class='far fa-trash-alt fa-2x edit' data-dismiss='modal' item='" + i + "' onClick='deleteReview(this)' ></i>";
+            star += "<i class='far fa-edit fa-2x edit' data-toggle='modal' data-target='#editReviewsModal' data-dismiss='modal' item='" + i + "' onClick='editReview(this)' ></i>";
             document.getElementById("rating" + i).insertAdjacentHTML('beforebegin', star + "<br/>");
         }
+    }
+}
+
+
+
+function editReview(element) {
+    var item = element.getAttribute("item");
+
+    currentIndex = item;
+
+    document.getElementById("editnickname").value = review_array[item].username;
+    document.getElementById("edituserReviews").value = review_array[item].review;
+    console.log(review_array[item].rating);
+    // displayColorPopcorn('editpop', review_array[item].rating);
+}
+
+// function displayColorPopcorn(classname, num) {
+//     var pop = document.getElementsByClassName(classname);
+//     var classTarget = "." + classname;
+//     for (let p of pop) {
+//         p.setAttribute("src", popcornBWImage);
+//     }
+//     changePopcornImage(num, classTarget);
+// }
+
+
+function updateReview() {
+    var response = confirm("Are you sure you want to update this review?");
+    if (response == true) {
+        // var edit_review_url = reviews_url + "/" + review_array[currentIndex]._id;
+        var updateReview = new XMLHttpRequest(); // new HttpRequest instance to send request to server
+        updateReview.open("PUT", reviews_url, true); //The HTTP method called 'PUT' is used here as we are updating data
+        updateReview.setRequestHeader("Content-Type", "application/json");
+        review_array[currentIndex].username = document.getElementById("editnickname").value;
+        review_array[currentIndex].review = document.getElementById("edituserReviews").value;
+        review_array[currentIndex].rating = rating;
+        updateReview.onload = function () {
+            fetchReviews();
+        };
+        updateReview.send(JSON.stringify(review_array[currentIndex]));
     }
 }
