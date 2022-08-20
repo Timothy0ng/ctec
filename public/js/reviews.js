@@ -153,7 +153,7 @@ function editReview(element) {
     currentIndex = item;
 
     // document.getElementById("editnickname").value = review_array[item].reviews_UserId;
-    document.getElementById("editnickname").value = review_array[item].username;
+    document.getElementById("editnickname").value = current_user.username;
     document.getElementById("edituserReviews").value = review_array[item].review;
     console.log(review_array[item].rating);
     // displayColorPopcorn('editpop', review_array[item].rating);
