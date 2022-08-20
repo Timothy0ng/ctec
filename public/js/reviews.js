@@ -119,7 +119,7 @@ function showBookReviews(element) {
     for (var i = 0; i < review_array.length; i++) {
         if (review_array[i].reviews_BookId === book_array[item].id) {
             // document.getElementById("emptyreview").innerHTML = "";
-            selectedMovieId = review_array[item]._id;
+            selectedMovieId = review_array[item].id;
             star = "";
             var html = '<div class="text-center" style="width:80%; padding-left:20vw;">                                                           \
                             <div class="card">                                                                                  \
