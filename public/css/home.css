@@ -40,7 +40,9 @@
   grid-column: 1;
   position: sticky;
   top: 0;
-  background-image: url("../pics/nice.png");
+  /* background-image: url("../pics/nice.png"); */
+  background-image: url("https://ctecimages69.s3.amazonaws.com/pics/nice.png");
+  
   background-repeat: no-repeat;
   background-size: cover;
 }
